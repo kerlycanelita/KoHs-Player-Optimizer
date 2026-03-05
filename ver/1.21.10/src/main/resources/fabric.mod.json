@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "kohs_player_optimizer",
+  "version": "${version}",
+  "name": "KoHs Player Optimizer",
+  "description": "Client-focused Fabric optimization mod for smoother rendering, movement, placement, and interaction responsiveness.",
+  "authors": [
+    "KoHs"
+  ],
+  "license": "GPL-3.0-only",
+  "environment": "client",
+  "entrypoints": {
+    "main": [
+      "com.kohs.optimizer.KohsPlayerOptimizerMod"
+    ],
+    "client": [
+      "com.kohs.optimizer.client.KohsPlayerOptimizerClient"
+    ],
+    "modmenu": [
+      "com.kohs.optimizer.client.modmenu.KohsModMenuIntegration"
+    ]
+  },
+  "mixins": [
+    "kohs_player_optimizer.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.18.4",
+    "minecraft": "~1.21.10",
+    "java": ">=21",
+    "fabric-api": "*",
+    "cloth-config": ">=20.0.149",
+    "modmenu": ">=16.0.0"
+  },
+  "suggests": {
+    "sodium": "*",
+    "lithium": "*",
+    "reeses-sodium-options": "*"
+  }
+}

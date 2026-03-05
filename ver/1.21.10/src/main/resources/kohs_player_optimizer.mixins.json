@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.kohs.optimizer.client.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "InGameOverlayRendererMixin",
+    "PlayerEntityAttackCooldownMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 0
+  }
+}
