@@ -1,0 +1,9 @@
+plugins {
+    id 'base'
+}
+
+tasks.register('build12110') {
+    group = 'build'
+    description = 'Builds the Minecraft 1.21.10 module.'
+    dependsOn(':versions:mc1_21_10:build')
+}
