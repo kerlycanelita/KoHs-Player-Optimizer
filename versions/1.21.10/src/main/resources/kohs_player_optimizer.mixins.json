@@ -5,7 +5,9 @@
   "compatibilityLevel": "JAVA_21",
   "client": [
     "InGameOverlayRendererMixin",
-    "PlayerEntityAttackCooldownMixin"
+    "PlayerEntityAttackCooldownMixin",
+    "MinecraftClientInvoker",
+    "ClientPlayerInteractionManagerMixin"
   ],
   "injectors": {
     "defaultRequire": 0
