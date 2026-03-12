@@ -35,6 +35,9 @@ public final class OptimizerConfigManager {
 
     public static synchronized void load() {
         if (!Files.exists(CONFIG_PATH)) {
+            config = new OptimizerConfig();
+            config.normalize();
+            PresetApplier.ensureCustomSnapshot(config);
             save();
             return;
         }
@@ -42,11 +45,15 @@ public final class OptimizerConfigManager {
         try (Reader reader = Files.newBufferedReader(CONFIG_PATH)) {
             OptimizerConfig loaded = GSON.fromJson(reader, OptimizerConfig.class);
             if (loaded != null) {
+                loaded.normalize();
+                PresetApplier.ensureCustomSnapshot(loaded);
                 config = loaded;
             }
         } catch (IOException | JsonParseException exception) {
             LOGGER.warn("Failed to load config, restoring defaults: {}", CONFIG_PATH, exception);
             config = new OptimizerConfig();
+            config.normalize();
+            PresetApplier.ensureCustomSnapshot(config);
             save();
         }
     }
