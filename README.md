@@ -2,6 +2,11 @@
 
 High-performance Fabric optimization mod workspace for Minecraft versions **1.21** through **1.21.10**.
 
+## Important Beta Warning
+
+This mod is **still beta** and currently has known bugs and unresolved edge cases.
+Use it with caution in real modpacks/servers while stabilization continues.
+
 ## Project Status
 
 This project is currently in **active development** and tagged as **beta**.
